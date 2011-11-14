@@ -48,7 +48,7 @@ module ActiveAdmin
             text_node link_to(item.name, controller.config.relative_url_root + item.url || "#")
             render_nested_menu(item)
           else
-            link_to item.name, item.url
+            link_to item.name, controller.config.relative_url_root + item.url
           end
         end
       end
